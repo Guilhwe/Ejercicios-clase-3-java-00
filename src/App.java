@@ -1,8 +1,10 @@
 
 import Vehiculos.ModeloCoche;
 import Animales.Perro;
-import Banco.CuentaBancaria;
 import Banco.CuentaCorriente;
+import Primos.GeneradorPrimo;
+import Primos.NumerosPrimos;
+import Primos.VerificadorPrimo;
 import Animales.Gato;
 
 public class App {
@@ -31,5 +33,16 @@ public class App {
         cuentaCorriente.tarifaMantenimiento();
         cuentaCorriente.consultarSaldo();
 
-    }
+
+    VerificadorPrimo verificadorPrimo = new VerificadorPrimo();
+    verificadorPrimo.verificarSiEsPrimo(5);
+    verificadorPrimo.verificarSiEsPrimo(10);
+    verificadorPrimo.verificarSiEsPrimo(13);
+    verificadorPrimo.verificarSiEsPrimo(20);
+
+    GeneradorPrimo generadorPrimo = new GeneradorPrimo();
+    System.out.println(generadorPrimo.generadorPrimo(5));
+    System.out.println(generadorPrimo.generadorPrimo(10));  
+    System.out.println(generadorPrimo.generadorPrimo(13));
+}
 }
